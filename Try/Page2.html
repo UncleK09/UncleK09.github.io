@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+    #page-2 {
+        background-color: #FFF1BD;
+    }
+    .program-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+    }
+
+    .program {
+        width: 45%;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .program img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    #navigation-bar {
+        background-color: #333;
+        padding: 10px;
+        display: none; /* Hide initially */
+    }
+
+    #navigation-bar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #navigation-bar li {
+        display: block;
+        margin-bottom: 10px;
+        text-align: right;
+    }
+
+    #navigation-bar a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        display: block;
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #toggle-menu {
+        cursor: pointer;
+        color: black;
+        background-color:#FF9E00;
+        font-size: 2em;
+        padding: 10px;
+        text-align: right;
+        margin-top: 15px;
+    }
+
+    #logo {
+        display: block;
+        margin: 0 auto; 
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: Verdana, sans-serif;
+        color: #000;
+    }
+
+    .program-container {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    }
+
+    .program {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 100%;
+        width: auto;
+        padding: 25px;
+        margin-top: -22px;
+        font-size: 15px;
+        cursor: pointer;
+        background-color: #FF9E00;
+        max-width: 300px;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 50%;
+        margin-inline: auto; 
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.322);
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+
+    /* Add a media query for smaller screens */
+    @media screen and (max-width: 300px) {
+        table {
+            margin: auto;
+        }
+
+        th, td {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+    </style>
+</head>
+    
+<body id="page-2">
+
+    <img id="logo" src="logo (2).png">
+
+    <h1>Glow Online Exercise Class</h1>
+
+    <div id="toggle-menu">Menu&#9776;
+
+    </div>
+    
+    <nav id="navigation-bar">
+        <ul>
+            <li><a href="Page1.html" >Home</a></li>
+            <li><a href="Page2.html" >Our Program</a></li>
+            <li><a href="Page3.html" >Contact Us</a></li>
+        </ul>
+    </nav>    
+
+    <h2 style="font-family: verdana; text-align: center;">The Program We Provide</h2>
+
+    <div class="program-container slideshow-container">
+        <div class="program fade">
+            <h2>(1) Cardio Power Hour</h2>
+            <img src="cardio.jpg" alt="Cardio Power Hour">
+            <p><br>Duration: 4 weeks</p>
+            <p>Objective: Improve cardiovascular endurance, boost energy levels, and promote fat loss.</p>
+            <p>Weekly Schedule:</p>
+            <p>Day 1: Cardio Kickboxing (45 minutes)</p>
+            <p>A high-energy class that combines cardio moves with kickboxing techniques to get the heart rate up.</p>
+            <p>Day 2: HIIT Circuit (30 minutes)</p>
+            <p>A high-intensity interval training session focusing on short bursts of all-out effort followed by brief recovery periods.</p>
+            <p>Day 3: Dance Cardio (45 minutes)</p>
+            <p>A fun dance-based cardio workout set to upbeat music to keep participants engaged and sweating.</p>
+            <p>Day 4: Low-Impact Cardio (30 minutes)</p>
+            <p>A gentler, joint-friendly cardio class designed for all fitness levels.</p>
+        </div>
+    
+        <div class="program fade">
+            <h2>(2) Strength and Sculpt</h2>
+            <img src="strength.jpeg" alt="Strength and Sculpt">
+            <p><br>Duration: 6 weeks</p>
+            <p>Objective: Build muscular strength, tone the body, and improve overall fitness.</p>
+            <p>Weekly Schedule:</p>
+            <p>Day 1: Upper Body Strength (45 minutes)</p>
+            <p>Concentrates on exercises targeting the chest, back, shoulders, and arms using body weight and/or dumbbells.</p>
+            <p>Day 2: Lower Body Strength (45 minutes)</p>
+            <p>Focuses on exercises for the legs and glutes, incorporating squats, lunges, and resistance bands.</p>
+            <p>Day 3: Core Conditioning (30 minutes)</p>
+            <p>A class dedicated to core exercises, including planks, Russian twists, and leg raises.</p>
+            <p>Day 4: Full-Body Circuit (45 minutes)</p>
+            <p">Combines upper and lower body exercises in a circuit format for a comprehensive workout.</p>
+        </div>
+    </div>
+    
+    <div class="program-container">
+        <div class="program">
+            <h2>(3) Yoga and Mindfulness</h2>
+            <img src="yoga.jpg" alt="Yoga and Mindfulness">
+            <p><br>Duration: Ongoing</p>
+            <p >Objective: Enhance flexibility, reduce stress, and promote mindfulness.</p>
+            <p >Weekly Schedule:</p>
+            <p >Day 1: Hatha Yoga (45 minutes)</p>
+            <p >Focuses on basic yoga poses and alignment to improve flexibility and balance.</p>
+            <p >Day 2: Vinyasa Flow (45 minutes)</p>
+            <p >A dynamic yoga class that links breath with movement to promote strength and flexibility.</p>
+            <p >Day 3: Restorative Yoga (30 minutes)</p>
+            <p >A calming and restorative practice that uses props to relax and release tension.</p>
+            <p >Day 4: Mindfulness Meditation (15 minutes)</p>
+            <p >A guided meditation session to cultivate mindfulness and reduce stress.</p>
+        </div>
+    
+        <div class="program">
+            <h2>(4) Functional Fitness Bootcamp</h2>
+            <img src="bootcamp.jpg" alt="Functional Fitness Bootcamp">
+            <p><br>Objective: Enhance functional strength, improve agility, and prepare participants for real-life physical challenges.</p>
+            <p>Weekly Schedule:</p>
+            <p>Day 1: Agility Drills (45 minutes)</p>
+            <p>Incorporates ladder drills, cone drills, and other agility exercises.</p>
+            <p>Day 2: Functional Strength (45 minutes)</p>
+            <p>Uses functional movements
+        </div>
+    </div>
+    
+    <div>
+        <table>
+            <tr>
+                <th>Number</th>
+                <th>Package</th>
+                <th>Price(RM)</th>
+            </tr>
+                        
+            <tr>
+                <td>(1)</td>
+                <td>Cardio Power Hour</td>
+                <td>RM50</td>
+            </tr>
+                        
+            <tr>
+                <td>(2)</td>
+                <td>Strength and Scuplt</td>
+                <td>RM70</td>
+            </tr>
+                        
+            <tr>
+                <td>(3)</td>
+                <td>Yoga and Mindfulness</td>
+                <td>RM70</td>
+            </tr>
+                        
+            <tr>
+                <td>(4)</td>
+                <td>Functional Fitness Bootcamp</td>
+                <td>RM100</td>
+            </tr>
+        </table>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+<script>
+    function scrollToTargetPage(e) {
+        e.preventDefault(); // Prevent the default behavior first
+        var targetPage = $(this).attr('href'); // Get the target page from the href attribute
+        $('html, body').animate({
+            scrollTop: $(targetPage).offset().top // Scroll to the target page
+        }, 1000); // Adjust the speed as needed
+    }
+        // jQuery for smooth scrolling
+        $(document).ready(function() {
+            $('#toggle-menu').on('click', function() {
+                $('#navigation-bar').slideToggle();
+            })
+        });
+
+    var slideIndex = 1;
+
+    function showSlides(n) {
+        var i;
+        var slides = $(".program");
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+        slides.hide();
+        slides.eq(slideIndex - 1).fadeIn();
+    }
+
+        function plusSlides(n) {
+            showSlides((slideIndex += n));
+        }
+
+        $(document).ready(function () {
+            showSlides(slideIndex);
+        });
+</script>
+</body>
+</html>

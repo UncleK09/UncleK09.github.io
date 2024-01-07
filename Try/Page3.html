@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            background-color: #FFF1BD;
+            text-align: center;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        h1 {
+            font-family: verdana;
+        }
+
+        .program {
+            background-color: #FF9E00;
+            width: 100%;
+        }
+
+        .nav-item {
+            margin-bottom: 10px;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #000000;
+            padding: 10px;
+            display: block;
+        }
+
+        .contact {
+            background-color: #8CFFF1;
+            text-align: left;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .branch-info p1 {
+            margin: 0;
+        }
+
+        .form-input {
+            margin-bottom: 10px;
+        }
+
+        #navigation-bar {
+            background-color: #333;
+            padding: 10px;
+            display: none; /* Hide initially */
+        }
+
+        #navigation-bar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navigation-bar li {
+            display: block;
+            margin-bottom: 10px;
+            text-align: right;
+        }
+
+        #navigation-bar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: block;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #toggle-menu {
+            cursor: pointer;
+            color: black;
+            background-color:#FF9E00;
+            font-size: 2em;
+            padding: 10px;
+            text-align: right;
+            margin-top: 15px;
+        }
+
+        #logo {
+            display: block;
+            margin: 0 auto; 
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body id="page-3">
+        <img id="logo" src="logo (2).png">
+
+        <h1>Glow Online Exercise Class</h1>
+    
+        <div id="toggle-menu">Menu&#9776;
+
+        </div>
+        
+        <nav id="navigation-bar">
+            <ul>
+                <li><a href="Page1.html" >Home</a></li>
+                <li><a href="Page2.html" >Our Program</a></li>
+                <li><a href="Page3.html" >Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <h1>Contact Us</h1>
+            <div class="branch-info">
+                <p1>First Branch</p1><br>
+                <p1>Jalan Abu Bakar, 86800 Mersing, Johor</p1><br>
+                <p1>011-12345678</p1><br>
+                <p1>Open : 10 a.m - 10 p.m</p1>
+            </div>
+            <div class="branch-info">
+                <p1><br>Second Branch</p1><br>
+                <p1>Jalan Jemaluang, 86800 Mersing, Johor</p1><br>
+                <p1>012-3456789</p1><br>
+                <p1>Open : 10 a.m - 10 p.m</p1>
+            </div>
+        </div>
+    
+        <div class="contact">
+            <form action="Page1.html" onsubmit="return validateForm()" id="form">
+                <div class="form-input">
+                    Gender : <input type="radio" name="sex" value="Male">Male
+                    <input type="radio" name="sex" value="Female">Female
+                </div>
+                <div class="form-input">
+                    <p1>Select branch you want :</p1>
+                    <select>
+                        <option value="First Branch">First Branch</option>
+                        <option value="Second Branch">Second Branch</option>
+                    </select>
+                </div>
+                <div class="form-input">
+                    <p1>Select the program you are interested in</p1>
+                    <p2><br>Program :<br></p2>
+                    <input type="checkbox" name="program" value="Cardio">Cardio Power Hour<br>
+                    <input type="checkbox" name="program" value="Strength">Strength and Scuplt<br>
+                    <input type="checkbox" name="program" value="Yoga">Yoga and Mindfulness<br>
+                    <input type="checkbox" name="program" value="Functional">Functional Fitness Bootcamp<br>
+                </div>
+            </form>
+            <br>
+            <button type="submit" form="form" value="Submit">Submit</button>
+        </div>
+<script>
+
+function validateForm() {
+        // Validate gender
+        var genderInputs = document.getElementsByName('sex');
+        var genderSelected = false;
+
+        for (var i = 0; i < genderInputs.length; i++) {
+            if (genderInputs[i].checked) {
+                genderSelected = true;
+                break;
+            }
+        }
+
+        if (!genderSelected) {
+            alert('Please select a gender.');
+            return false;
+        }
+
+        // Validate branch
+        var branchSelect = document.querySelector('.form-input select');
+        if (branchSelect.value === "") {
+            alert('Please select a branch.');
+            return false;
+        }
+
+        // Validate program
+        var programInputs = document.getElementsByName('program');
+        var programSelected = false;
+
+        for (var i = 0; i < programInputs.length; i++) {
+            if (programInputs[i].checked) {
+                programSelected = true;
+                break;
+            }
+        }
+
+        if (!programSelected) {
+            alert('Please select at least one program.');
+            return false;
+        }
+        var confirmation = confirm('Are you sure you want to submit?');
+            if (confirmation) {
+                // Redirect to another page after submission
+                window.location.href = 'Page1.html';
+            }
+        return true;
+    }
+    function scrollToTargetPage(e) {
+        e.preventDefault(); // Prevent the default behavior first
+        var targetPage = $(this).attr('href'); // Get the target page from the href attribute
+        $('html, body').animate({
+            scrollTop: $(targetPage).offset().top // Scroll to the target page
+        }, 1000); // Adjust the speed as needed
+}
+    // jQuery for smooth scrolling
+    $(document).ready(function() {
+        $('#toggle-menu').on('click', function() {
+            $('#navigation-bar').slideToggle();
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body id="page-1">
+
+        <img id="logo" src="logo (2).png">
+        
+        <h1>Glow Online Exercise Class</h1>
+    
+        <div id="toggle-menu">Menu&#9776;</div>
+        <nav id="navigation-bar">
+            <ul>
+                <li><a href="Page1.html" >Home</a></li>
+                <li><a href="Page2.html" >Our Program</a></li>
+                <li><a href="Page3.html" >Contact Us</a></li>
+            </ul>
+        </nav>
+
+    <h1>Introduction</h1>
+
+    <p>In today's fast-paced world, maintaining a healthy lifestyle is more important than ever.Regular exercise not only keeps us physically fit but also plays a significant role in improving our mental well-being.However, finding the time and motivation to engage in regular physical activity can be challenging, especially when our schedules are packed with various commitments and responsibilities.That's where Glow Online Exercise Class comes to the rescue.</p>
+    <p>Glow Online Exercise Class is a revolutionary fitness program designed to bring the benefits of exercise right to your doorstep, no matter where you are.In a world that is increasingly connected through technology, Glow has harnessed the power of the internet to offer convenient, engaging, and effective workouts that cater to individuals of all fitness levels.With Glow, you can say goodbye to the hassle of commuting to a gym, expensive fitness memberships, and the limitations of your local workout facilities.Our online exercise classes are accessible 24/7, allowing you to choose when and where you want to work out. Whether you're an early riser looking for a morning boost, a busy professional fitting exercise into your lunch break, or a night owl seeking a late-night session, Glow has a class for you.</p>
+    <p>Our team of experienced and certified fitness instructors is dedicated to helping you achieve your health and fitness goals.From high-energy cardio workouts to relaxing yoga sessions and everything in between, Glow offers a wide range of classes that cater to different interests and abilities.You can tailor your fitness journey to suit your preferences and track your progress over time.What sets Glow apart is its vibrant and supportive online community. Joining Glow means becoming a part of a community of like-minded individuals who share your passion for health and well-being.You can interact with fellow members, exchange fitness tips, and motivate each other to stay on track.</p>
+    <p>In this fast-paced digital age, where convenience and flexibility are key, Glow Online Exercise Class has emerged as a beacon of light for those seeking a healthier, more active lifestyle.Whether you're a beginner taking your first steps on the fitness journey or a seasoned athlete looking to spice up your routine, Glow is here to help you unleash your inner radiance and glow with confidence. </p>
+    <p>Join us today, and let's embark on a fitness journey that transcends geographical boundaries and brings wellness to your fingertips.It's time to shine bright with Glow Online Exercise Class!</p>
+    
+    <div id="h">
+        <h>Registration Option</h>
+    </div>
+    <div class="container">
+        <form id="registrationForm">
+
+            <div class="social-options">
+                <p>Create account using:</p>
+                <a href="https://www.icloud.com/" onclick="createAccount('Apple')">
+                <img src="appleicon.png" alt="Apple Logo">
+                </a>
+
+                <a href="https://login.microsoftonline.com/" onclick="createAccount('Microsoft')">
+                <img src="micosofticon.png" alt="Microsoft Logo">
+                </a>
+
+                <a href="https://mail.google.com/" onclick="createAccount('Gmail')">
+                <img src="Googleicon.png" alt="Gmail Logo">
+                </a>
+
+                <a href="Registration.html" onclick="createAccount('Registration')">
+                <img id="registration" src="createacc.png" alt="Create Account">
+                </a>
+            </div>
+        </form>
+    </div>
+
+<script>
+    function createAccount(provider) {
+        alert('Redirecting to ' + provider);
+    }
+
+    function scrollToTargetPage(e) {
+        e.preventDefault(); // Prevent the default behavior first
+        var targetPage = $(this).attr('href'); // Get the target page from the href attribute
+        $('html, body').animate({
+            scrollTop: $(targetPage).offset().top // Scroll to the target page
+        }, 1000); // Adjust the speed as needed
+}
+    // jQuery for smooth scrolling
+    $(document).ready(function() {
+        $('#toggle-menu').on('click', function() {
+            $('#navigation-bar').slideToggle();
+        })
+    });
+    
+</script>
+</body>
+</html>
